@@ -1,0 +1,27 @@
+    git bisect
+
+- Para iniciar/terminar el bisect. Este comando funciona para rastrear algun error que exista en nuestro proyecto entre los commits existentes de la rama.
+$ git bisect start/reset
+
+- Para marcar cual commit esta bien o esta mal dependiendo de si presentan dicho error en el proyecto.
+$ git bisect good/bad <numero_de_commit>
+
+- Clona un segundo repositorio dentro del repositorio presente.
+$ git submodule add <link_del_segundo_repo>
+
+- Actualiza los repositorios que están dentro del repositorio principal.
+$ git submodule update
+
+- Detalla los datos de usuario fecha de los commits en el archivo indicado archivo
+$ git blame <archivo>
+
+- Busca la palabra solicitada entre los archivos del repositorio
+$ git grep <palabra>
+
+- Indica también la linea donde se ubica.
+$ git grep -n <palabra>
+
+- Crea un acceso rapido de un comando 
+$ git config --global alias.log10 "git log --oneline -10"
+
+heroku.com

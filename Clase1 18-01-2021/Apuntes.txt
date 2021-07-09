@@ -1,0 +1,47 @@
+
+- Otros servidorescentralizado para trabajar con Git:
+*GitLab.
+*Bitbucket.
+
+Comandos
+
+
+Para agregar un usuario
+$ git config --global user.name <nombre de usuario>
+
+Para agregar un correo
+$ git config --global user.email <nombre de usuario>
+
+Para borrar
+$ git config --global --unset __.___
+
+Para clonar
+$ git clone <URLdelRepositorio>
+
+Para ver el estado del repositorio
+$ git status
+
+Para agregar o compensar un archivo al repositorio
+$ git add <nombre del archivo.tipo de archivo>
+
+Para agregar o compensar todo el repositorio junto
+$ git add .
+
+Para agregar mensaje para un "checkpoint"
+$ git commit -m "Mensaje entre comillas"
+
+Para visualizar los commits realizados, por quien y cuando
+$ git log
+
+Para compensar nuestra reposicion con la que se ubica en Github
+$ git push
+
+Para el caso en que uno se equivoca en NO escribir -m en el commit
+Esc + luego escribe ":wq"
+
+En caso de solo aparecer solo ":" es que se está en el modo interactivo. Se sale de ese modo escribiendo solo "q" y Enter
+
+Diapositivas:
+https://mega.nz/folder/9EcBTCDB#kTMNQy26Wm2Plrmr5TP_4w
+
+

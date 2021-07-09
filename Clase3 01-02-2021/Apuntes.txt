@@ -1,0 +1,42 @@
+
+$ git branch  vs $ git branch -about
+
+Con el primer git haces un listado de las ramas que tiene tu repositorio localmente. En el segundo, también realiza una lista de las ramas del repositorio local, pero además de eso, muestra en la lista las ramas existentes del proyecto, es decir, adicionalmente las que no estan guardadas de manera local.
+
+Envia los errores realizados en una rama al area del stage de Git.
+$ git stash
+
+Lista estos errores guardados
+$ git stash list
+
+Muestra todas las lineas de tiempos (ramas) interpretados con grafos
+$ git log --oneline --graph --all
+
+Muestra la lista de commits dandonos mas informacion de cada cual incluyendo las comparaciones hechas con los diffs entre cada uno.
+$ git log -p
+
+Da un nombre al commit indicado, al igual que el commit, pretende ser unico.
+$ git tag <nombre_del_tag> <commit>
+
+Tambien se pueden comparar los commits con el diff nombrandolos por los tags asignados a cada uno.
+$ git diff <tag_del_commit> <tag_del_commit>
+
+Como eliminar a traves de los comandos de Git
+
+Para cambiar el comentario del commit
+$ git reset --soft HEAD~1
+
+Todas las cosas que agregaste en el ultimo commit, las devuelve al area de "working".
+$ git reset --mixed HEAD~1
+
+
+Eliminar el ultimo commit.
+$ git reset --hard HEAD~1
+
+------------------------------------------------------------------------------------------------------------
+
+Realiza un merge entre alguna version de un branch distito con el ultimmo commit del branch presente.
+$ git cherry-pick <commit que deseo traer>
+
+Este commit
+$ git revert <commit al que deseo regresar removiendo los push hasta dicho commit>

@@ -1,0 +1,62 @@
+git init .
+
+Este convierte a una carpeta en repositorio (crea la carpeta .git)
+
+git init <name>
+
+este me crea una carpeta nueva y la convierte en repositorio.
+
+link de repo, rama "pepe"
+https://github.com/rapaMatiase/Repo2
+
+
+El diff me permite comparar los cambios hechos del commitA respecto del commitB
+$ git diff #commitA #commitB
+
+cuando solo se ingresa un commit se compara dicho commit con el señalado por el HEAD, usualmente seria el último commit
+$ git diff #commitX                                    (HEAD seria el commit sobre el que uno está presente en gestión)
+
+para ver el numero de commit puede ejecutar el comando 
+$ git log --oneline
+
+-- Comandos de Ramas --
+
+Nos permite ver las ramas locales de las que disponemos. El nombre de la rama que tenga el " * " es la rama donde estamos ubicados.
+$ git branch
+
+Para crear una rama nueva de nombre <name>
+$ git branch <name>
+
+Nos permite movernos a la rama de nombre <branch_name>. El puntero HEAD pasa a apuntar al ultimo commit de esa rama.
+$ git checkout <branch_ name>
+
+Para pushear una nueva rama local que aún no conozca github
+$ git push --set-upstream origin andresal
+
+Para hacer que el repositorio local se actualice con respecto con las de github
+$ git pull
+
+para listar las ramas (branchs) del repositorio siendo las rojas aquellas que no tengo una copia localmente.
+$ git branch -a
+
+si me muevo a una rama que no tengo localmente una copia de su historial, la traigo con el mismo checkout.
+
+[ REGLA DE ORO - NO TOCAR RAMA AJENA SIN AVISO O PERMISO ]
+
+-----------------------------------------------------------
+
+Este comando crea una rama y te mueve a esta.
+$ git checkout -b <new_branch_name>
+
+Borra la rama, siempre en cuando no tenga ningún commit sin salvar.
+$ git branch -d  <branch_name>
+
+Estando parado en la rama donde quiero que se guarden los resultados del conflicto (del merge), ejecuto el comando con el nombre de la rama de la cual me quiero traer los cambios.
+$ git merge <branch_name>
+
+BUENAS PRACTICAS AL HACER merge
+
+- El merge se hace sobre la rama secundaria y, luego, sobre la principal.
+- Después del merge debo ejecutar o correr los test, para comprobar que el resultado del merge es una version funcional.
+- Después de hacer un merge, si es una rama ocmpartida con otros miembros del equipo, no olvidar hacer push.
+
